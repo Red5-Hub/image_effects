@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astronaut ImageEffects</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&display=swap');
+  </style>
+</head>
+ <audio id="backgroundAudio" loop>
+  <source src="https://maryland.cl/img/isotipos/img_wb/ejercioAstronauta-lofi-comprimio.mp3">
+  </audio>
+<body class="light-theme">
+  <div class="theme-switcher">
+    <span class="moon" onclick="toggleTheme('dark')">🌙</span>
+    <span class="flower" onclick="toggleTheme('pink')">🌸</span>
+    <span class="audio-control" onclick="toggleAudio()">🔊</span>
+  </div>
+  <div class="container">
+    <div class="left-column">
+      <div class="image-container">
+        <img src="https://lh3.googleusercontent.com/d/1ma3xtVHbQxYkEeP9E3-f8MFRWeWLXQun=s750" alt="Astronauta" id="astronaut">
+      </div>
+    </div>
+    <div class="right-column">
+      <ul>
+        <li onclick="applyEffect('brightness')">Brightness</li>
+        <li onclick="applyEffect('contrast')">Contrast</li>
+        <li onclick="applyEffect('blur')">Blur</li>
+        <li onclick="applyEffect('grayscale')">Grayscale</li>
+        <li onclick="applyEffect('invert')">Invert</li>
+        <li onclick="applyEffect('sepia')">Sepia</li>
+        <li onclick="applyEffect('saturate')">Saturate</li>
+        <li onclick="applyEffect('hue-rotate')">Hue-Rotate</li>
+        <li onclick="applyEffect('drop-shadow')">Drop-Shadow</li>
+        <li onclick="applyEffect('opacity')">Opacity</li>
+        <li onclick="applyEffect('negative')">Negative</li>
+        <li onclick="applyEffect('combo')">Combo RGB</li>
+        <li onclick="applyEffect('rotate')">Rotate</li>
+        <li onclick="applyEffect('mirror-horizontal')">Mirror Horizontal</li>
+        <li onclick="applyEffect('mirror-vertical')">Mirror Vertical</li>
+        <li onclick="applyEffect('zoom')">Zoom</li>
+        <li onclick="applyEffect('reset')">Reset</li>
+      </ul>
+    </div>
+  </div>
+  <footer></footer>
+  <script src="script.js"></script>
+</body>
+</html>
+

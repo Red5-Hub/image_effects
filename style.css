@@ -1,0 +1,173 @@
+:root {
+    --bg-color: #f0f0f0;
+    --star-color: #333;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .light-theme {
+    background-color: white;
+    color: black;
+  }
+  
+  .dark-theme {
+    background-color: rgb(17, 22, 42);
+    color: white;
+  }
+  
+  .pink-theme {
+    background-color: pink;
+    color: white;
+  }
+  
+  .container {
+    display: flex;
+    width: 95%;
+    max-width: 1400px;
+    margin: 50px auto;
+    gap: 20px;
+    flex-direction: column;
+  }
+  
+  .left-column {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 8px;
+  }
+  
+  .right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .image-container {
+    width: 96%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 20px; /* Margen superior añadido */
+    /*border: 5px solid brown; /* Asegurando que el borde sea visible */ 
+  }
+  
+  .image-container img {
+    max-width: 94%;
+    max-height: 94%;
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      flex-direction: row;
+    }
+    .image-container {
+      height: 88vh;
+      margin-top: 50px; /* Ajuste de margen superior en pantallas grandes */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .image-container {
+      height: auto;
+      max-height: 70vh;
+    }
+  }
+  
+  @media (max-width: 440px) {
+    .image-container {
+      height: auto;
+      max-height: 100vh;
+    }
+  }
+  
+  .image-container {
+    transition: transform 0.6s ease-out; /* Transición suave para el movimiento */
+    animation: float 3.9s ease-in-out infinite; /* Animación flotante con duración ajustada */
+  }
+  
+  /* Animación de flotación vertical */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-35px); } /* Movimiento vertical de -35px */
+  }
+  
+  .right-column ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .right-column li {
+    cursor: pointer;
+    padding: 10px 12px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+  }
+  
+  .right-column li:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+  
+  .theme-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .theme-switcher span {
+    cursor: pointer;
+    font-size: 24px;
+    margin: 0 10px;
+  }
+  
+  @media (max-width: 770px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .right-column ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    .right-column li {
+      flex-basis: auto;
+      min-width: 100px;
+      max-width: calc(50% - 10px);
+    }
+  }
+  
+  .cherry-cream-soda-regular {
+    font-family: "Cherry Cream Soda", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .image-effects-title {
+    font-family: 'Cherry Cream Soda', cursive;
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
